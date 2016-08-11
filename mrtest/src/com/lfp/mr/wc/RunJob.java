@@ -13,11 +13,11 @@ public class RunJob {
 
 	public static void main(String[] args) {
 		
-		//System.setProperty("HADOOP_USER_NAME", "root");
+		System.setProperty("HADOOP_USER_NAME", "root");
 
 		Configuration config = new Configuration();
 		config.set("fs.defaultFS", "hdfs://node1:8020");
-		config.set("mapred.jar", "C:\\Users\\lfp\\Desktop\\wc.jar");
+		//config.set("mapred.jar", "C:\\Users\\lfp\\Desktop\\wc.jar");
 		try {
 			FileSystem fs = FileSystem.get(config);
 			Job job = Job.getInstance(config, "wc");
