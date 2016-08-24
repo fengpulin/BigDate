@@ -15,7 +15,7 @@ public class WcMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
 	protected void map(LongWritable key, Text value,
 			Context context)
 			throws IOException, InterruptedException {
-		String[] words = StringUtils.split(value.toString(), "s+");
+		String[] words = StringUtils.split(value.toString(), " ");
 		for(String word:words){
 			context.write(new Text(word), new IntWritable(1));
 		}

@@ -16,7 +16,7 @@ public class RunJob {
 
 		Configuration config = new Configuration();
 		config.set("fs.defaultFS", "hdfs://node1:8020");
-		//config.set("mapred.jar", "C:\\Users\\lfp\\Desktop\\friend.jar");
+		config.set("mapred.jar", "C:\\Users\\lfp\\Desktop\\friend.jar");
 		try {
 			FileSystem fs = FileSystem.get(config);
 			Job job = Job.getInstance(config, "friend");

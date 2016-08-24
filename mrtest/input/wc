@@ -1,4 +1,4 @@
-lfp hadoop zookeeper hdfs 
+lfp hadoop zookeeper hdfs
 hadoop hive hbase
 hbase hadoop lfp hive
 lfp
